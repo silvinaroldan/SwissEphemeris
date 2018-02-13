@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		356DD0092032C5AE00C1D1C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DD0082032C5AE00C1D1C3 /* AppDelegate.swift */; };
+		356DD00B2032C5AE00C1D1C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DD00A2032C5AE00C1D1C3 /* ViewController.swift */; };
+		356DD00E2032C5AE00C1D1C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356DD00C2032C5AE00C1D1C3 /* Main.storyboard */; };
+		356DD0102032C5AE00C1D1C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356DD00F2032C5AE00C1D1C3 /* Assets.xcassets */; };
+		356DD0132032C5AE00C1D1C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356DD0112032C5AE00C1D1C3 /* LaunchScreen.storyboard */; };
+		356DD01A2032DA2700C1D1C3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DD0192032DA2700C1D1C3 /* Extensions.swift */; };
+		3571C7DB2031203A00C79F94 /* SwissEphemeris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3571C7D12031203A00C79F94 /* SwissEphemeris.framework */; };
+		3571C7E02031203A00C79F94 /* SwissEphemerisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7DF2031203A00C79F94 /* SwissEphemerisTests.swift */; };
+		3571C7E22031203A00C79F94 /* SwissEphemeris.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7D42031203A00C79F94 /* SwissEphemeris.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3571C8022031205800C79F94 /* swemptab.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7EC2031205800C79F94 /* swemptab.h */; };
+		3571C8032031205800C79F94 /* swepcalc.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7ED2031205800C79F94 /* swepcalc.h */; };
+		3571C8042031205800C79F94 /* swemmoon.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7EE2031205800C79F94 /* swemmoon.c */; };
+		3571C8052031205800C79F94 /* swehouse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7EF2031205800C79F94 /* swehouse.h */; };
+		3571C8062031205800C79F94 /* swephexp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7F02031205800C79F94 /* swephexp.h */; };
+		3571C8072031205800C79F94 /* sweph.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7F12031205800C79F94 /* sweph.h */; };
+		3571C8082031205800C79F94 /* swedate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7F22031205800C79F94 /* swedate.h */; };
+		3571C8092031205800C79F94 /* swehel.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7F32031205800C79F94 /* swehel.c */; };
+		3571C80A2031205800C79F94 /* swejpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7F42031205800C79F94 /* swejpl.h */; };
+		3571C80B2031205800C79F94 /* swepdate.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7F52031205800C79F94 /* swepdate.c */; };
+		3571C80C2031205800C79F94 /* swephlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7F62031205800C79F94 /* swephlib.h */; };
+		3571C80D2031205800C79F94 /* swepcalc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7F72031205800C79F94 /* swepcalc.c */; };
+		3571C80E2031205800C79F94 /* swedll.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7F82031205800C79F94 /* swedll.h */; };
+		3571C80F2031205800C79F94 /* swehouse.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7F92031205800C79F94 /* swehouse.c */; };
+		3571C8102031205800C79F94 /* swecl.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7FA2031205800C79F94 /* swecl.c */; };
+		3571C8112031205800C79F94 /* swenut2000a.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7FB2031205800C79F94 /* swenut2000a.h */; };
+		3571C8122031205800C79F94 /* sweph.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7FC2031205800C79F94 /* sweph.c */; };
+		3571C8132031205800C79F94 /* swedate.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7FD2031205800C79F94 /* swedate.c */; };
+		3571C8142031205800C79F94 /* swemplan.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7FE2031205800C79F94 /* swemplan.c */; };
+		3571C8152031205800C79F94 /* swephlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7FF2031205800C79F94 /* swephlib.c */; };
+		3571C8162031205800C79F94 /* swejpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C8002031205800C79F94 /* swejpl.c */; };
+		3571C8172031205800C79F94 /* sweodef.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C8012031205800C79F94 /* sweodef.h */; };
+		3571C81A203120CE00C79F94 /* SwissEphemeris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571C819203120CE00C79F94 /* SwissEphemeris.swift */; };
+		358856D3203374B600C8EAAD /* SwissEphemeris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3571C7D12031203A00C79F94 /* SwissEphemeris.framework */; };
+		358856D4203374B600C8EAAD /* SwissEphemeris.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3571C7D12031203A00C79F94 /* SwissEphemeris.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3571C7DC2031203A00C79F94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3571C7C82031203A00C79F94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3571C7D02031203A00C79F94;
+			remoteInfo = SwissEphemeris;
+		};
+		358856D5203374B600C8EAAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3571C7C82031203A00C79F94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3571C7D02031203A00C79F94;
+			remoteInfo = SwissEphemeris;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		358856D7203374B600C8EAAD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				358856D4203374B600C8EAAD /* SwissEphemeris.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		356DD0062032C5AD00C1D1C3 /* SwissTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwissTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		356DD0082032C5AE00C1D1C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		356DD00A2032C5AE00C1D1C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		356DD00D2032C5AE00C1D1C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		356DD00F2032C5AE00C1D1C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		356DD0122032C5AE00C1D1C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		356DD0142032C5AE00C1D1C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		356DD0192032DA2700C1D1C3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3571C7D12031203A00C79F94 /* SwissEphemeris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwissEphemeris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3571C7D42031203A00C79F94 /* SwissEphemeris.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwissEphemeris.h; sourceTree = "<group>"; };
+		3571C7D52031203A00C79F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3571C7DA2031203A00C79F94 /* SwissEphemerisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwissEphemerisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3571C7DF2031203A00C79F94 /* SwissEphemerisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwissEphemerisTests.swift; sourceTree = "<group>"; };
+		3571C7E12031203A00C79F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3571C7EC2031205800C79F94 /* swemptab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swemptab.h; sourceTree = "<group>"; };
+		3571C7ED2031205800C79F94 /* swepcalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swepcalc.h; sourceTree = "<group>"; };
+		3571C7EE2031205800C79F94 /* swemmoon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swemmoon.c; sourceTree = "<group>"; };
+		3571C7EF2031205800C79F94 /* swehouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swehouse.h; sourceTree = "<group>"; };
+		3571C7F02031205800C79F94 /* swephexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swephexp.h; sourceTree = "<group>"; };
+		3571C7F12031205800C79F94 /* sweph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweph.h; sourceTree = "<group>"; };
+		3571C7F22031205800C79F94 /* swedate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swedate.h; sourceTree = "<group>"; };
+		3571C7F32031205800C79F94 /* swehel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swehel.c; sourceTree = "<group>"; };
+		3571C7F42031205800C79F94 /* swejpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swejpl.h; sourceTree = "<group>"; };
+		3571C7F52031205800C79F94 /* swepdate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swepdate.c; sourceTree = "<group>"; };
+		3571C7F62031205800C79F94 /* swephlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swephlib.h; sourceTree = "<group>"; };
+		3571C7F72031205800C79F94 /* swepcalc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swepcalc.c; sourceTree = "<group>"; };
+		3571C7F82031205800C79F94 /* swedll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swedll.h; sourceTree = "<group>"; };
+		3571C7F92031205800C79F94 /* swehouse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swehouse.c; sourceTree = "<group>"; };
+		3571C7FA2031205800C79F94 /* swecl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swecl.c; sourceTree = "<group>"; };
+		3571C7FB2031205800C79F94 /* swenut2000a.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swenut2000a.h; sourceTree = "<group>"; };
+		3571C7FC2031205800C79F94 /* sweph.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sweph.c; sourceTree = "<group>"; };
+		3571C7FD2031205800C79F94 /* swedate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swedate.c; sourceTree = "<group>"; };
+		3571C7FE2031205800C79F94 /* swemplan.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swemplan.c; sourceTree = "<group>"; };
+		3571C7FF2031205800C79F94 /* swephlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swephlib.c; sourceTree = "<group>"; };
+		3571C8002031205800C79F94 /* swejpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swejpl.c; sourceTree = "<group>"; };
+		3571C8012031205800C79F94 /* sweodef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweodef.h; sourceTree = "<group>"; };
+		3571C8182031208E00C79F94 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		3571C819203120CE00C79F94 /* SwissEphemeris.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwissEphemeris.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		356DD0032032C5AD00C1D1C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				358856D3203374B600C8EAAD /* SwissEphemeris.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3571C7CD2031203A00C79F94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3571C7D72031203A00C79F94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3571C7DB2031203A00C79F94 /* SwissEphemeris.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		356DD0072032C5AE00C1D1C3 /* SwissTest */ = {
+			isa = PBXGroup;
+			children = (
+				356DD0082032C5AE00C1D1C3 /* AppDelegate.swift */,
+				356DD00A2032C5AE00C1D1C3 /* ViewController.swift */,
+				356DD00C2032C5AE00C1D1C3 /* Main.storyboard */,
+				356DD00F2032C5AE00C1D1C3 /* Assets.xcassets */,
+				356DD0112032C5AE00C1D1C3 /* LaunchScreen.storyboard */,
+				356DD0142032C5AE00C1D1C3 /* Info.plist */,
+			);
+			path = SwissTest;
+			sourceTree = "<group>";
+		};
+		356DD0182032DA0A00C1D1C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				356DD0192032DA2700C1D1C3 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3571C7C72031203A00C79F94 = {
+			isa = PBXGroup;
+			children = (
+				3571C7D32031203A00C79F94 /* SwissEphemeris */,
+				3571C7DE2031203A00C79F94 /* SwissEphemerisTests */,
+				356DD0072032C5AE00C1D1C3 /* SwissTest */,
+				3571C7D22031203A00C79F94 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3571C7D22031203A00C79F94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3571C7D12031203A00C79F94 /* SwissEphemeris.framework */,
+				3571C7DA2031203A00C79F94 /* SwissEphemerisTests.xctest */,
+				356DD0062032C5AD00C1D1C3 /* SwissTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3571C7D32031203A00C79F94 /* SwissEphemeris */ = {
+			isa = PBXGroup;
+			children = (
+				356DD0182032DA0A00C1D1C3 /* Extensions */,
+				3571C7EB2031205800C79F94 /* SwissEph */,
+				3571C7D42031203A00C79F94 /* SwissEphemeris.h */,
+				3571C7D52031203A00C79F94 /* Info.plist */,
+				3571C819203120CE00C79F94 /* SwissEphemeris.swift */,
+			);
+			path = SwissEphemeris;
+			sourceTree = "<group>";
+		};
+		3571C7DE2031203A00C79F94 /* SwissEphemerisTests */ = {
+			isa = PBXGroup;
+			children = (
+				3571C7DF2031203A00C79F94 /* SwissEphemerisTests.swift */,
+				3571C7E12031203A00C79F94 /* Info.plist */,
+			);
+			path = SwissEphemerisTests;
+			sourceTree = "<group>";
+		};
+		3571C7EB2031205800C79F94 /* SwissEph */ = {
+			isa = PBXGroup;
+			children = (
+				3571C8182031208E00C79F94 /* module.modulemap */,
+				3571C7EC2031205800C79F94 /* swemptab.h */,
+				3571C7ED2031205800C79F94 /* swepcalc.h */,
+				3571C7EE2031205800C79F94 /* swemmoon.c */,
+				3571C7EF2031205800C79F94 /* swehouse.h */,
+				3571C7F02031205800C79F94 /* swephexp.h */,
+				3571C7F12031205800C79F94 /* sweph.h */,
+				3571C7F22031205800C79F94 /* swedate.h */,
+				3571C7F32031205800C79F94 /* swehel.c */,
+				3571C7F42031205800C79F94 /* swejpl.h */,
+				3571C7F52031205800C79F94 /* swepdate.c */,
+				3571C7F62031205800C79F94 /* swephlib.h */,
+				3571C7F72031205800C79F94 /* swepcalc.c */,
+				3571C7F82031205800C79F94 /* swedll.h */,
+				3571C7F92031205800C79F94 /* swehouse.c */,
+				3571C7FA2031205800C79F94 /* swecl.c */,
+				3571C7FB2031205800C79F94 /* swenut2000a.h */,
+				3571C7FC2031205800C79F94 /* sweph.c */,
+				3571C7FD2031205800C79F94 /* swedate.c */,
+				3571C7FE2031205800C79F94 /* swemplan.c */,
+				3571C7FF2031205800C79F94 /* swephlib.c */,
+				3571C8002031205800C79F94 /* swejpl.c */,
+				3571C8012031205800C79F94 /* sweodef.h */,
+			);
+			path = SwissEph;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3571C7CE2031203A00C79F94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3571C8072031205800C79F94 /* sweph.h in Headers */,
+				3571C8062031205800C79F94 /* swephexp.h in Headers */,
+				3571C7E22031203A00C79F94 /* SwissEphemeris.h in Headers */,
+				3571C80A2031205800C79F94 /* swejpl.h in Headers */,
+				3571C8172031205800C79F94 /* sweodef.h in Headers */,
+				3571C8022031205800C79F94 /* swemptab.h in Headers */,
+				3571C8032031205800C79F94 /* swepcalc.h in Headers */,
+				3571C80C2031205800C79F94 /* swephlib.h in Headers */,
+				3571C80E2031205800C79F94 /* swedll.h in Headers */,
+				3571C8052031205800C79F94 /* swehouse.h in Headers */,
+				3571C8112031205800C79F94 /* swenut2000a.h in Headers */,
+				3571C8082031205800C79F94 /* swedate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		356DD0052032C5AD00C1D1C3 /* SwissTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 356DD0172032C5AE00C1D1C3 /* Build configuration list for PBXNativeTarget "SwissTest" */;
+			buildPhases = (
+				356DD0022032C5AD00C1D1C3 /* Sources */,
+				356DD0032032C5AD00C1D1C3 /* Frameworks */,
+				356DD0042032C5AD00C1D1C3 /* Resources */,
+				358856D7203374B600C8EAAD /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				358856D6203374B600C8EAAD /* PBXTargetDependency */,
+			);
+			name = SwissTest;
+			productName = SwissTest;
+			productReference = 356DD0062032C5AD00C1D1C3 /* SwissTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3571C7D02031203A00C79F94 /* SwissEphemeris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3571C7E52031203A00C79F94 /* Build configuration list for PBXNativeTarget "SwissEphemeris" */;
+			buildPhases = (
+				3571C7CC2031203A00C79F94 /* Sources */,
+				3571C7CD2031203A00C79F94 /* Frameworks */,
+				3571C7CE2031203A00C79F94 /* Headers */,
+				3571C7CF2031203A00C79F94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwissEphemeris;
+			productName = SwissEphemeris;
+			productReference = 3571C7D12031203A00C79F94 /* SwissEphemeris.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3571C7D92031203A00C79F94 /* SwissEphemerisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3571C7E82031203A00C79F94 /* Build configuration list for PBXNativeTarget "SwissEphemerisTests" */;
+			buildPhases = (
+				3571C7D62031203A00C79F94 /* Sources */,
+				3571C7D72031203A00C79F94 /* Frameworks */,
+				3571C7D82031203A00C79F94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3571C7DD2031203A00C79F94 /* PBXTargetDependency */,
+			);
+			name = SwissEphemerisTests;
+			productName = SwissEphemerisTests;
+			productReference = 3571C7DA2031203A00C79F94 /* SwissEphemerisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3571C7C82031203A00C79F94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Silvina Roldan";
+				TargetAttributes = {
+					356DD0052032C5AD00C1D1C3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					3571C7D02031203A00C79F94 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					3571C7D92031203A00C79F94 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3571C7CB2031203A00C79F94 /* Build configuration list for PBXProject "SwissEphemeris" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3571C7C72031203A00C79F94;
+			productRefGroup = 3571C7D22031203A00C79F94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3571C7D02031203A00C79F94 /* SwissEphemeris */,
+				3571C7D92031203A00C79F94 /* SwissEphemerisTests */,
+				356DD0052032C5AD00C1D1C3 /* SwissTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		356DD0042032C5AD00C1D1C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356DD0132032C5AE00C1D1C3 /* LaunchScreen.storyboard in Resources */,
+				356DD0102032C5AE00C1D1C3 /* Assets.xcassets in Resources */,
+				356DD00E2032C5AE00C1D1C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3571C7CF2031203A00C79F94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3571C7D82031203A00C79F94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		356DD0022032C5AD00C1D1C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356DD00B2032C5AE00C1D1C3 /* ViewController.swift in Sources */,
+				356DD0092032C5AE00C1D1C3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3571C7CC2031203A00C79F94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3571C8102031205800C79F94 /* swecl.c in Sources */,
+				3571C8122031205800C79F94 /* sweph.c in Sources */,
+				3571C8142031205800C79F94 /* swemplan.c in Sources */,
+				3571C80F2031205800C79F94 /* swehouse.c in Sources */,
+				3571C8042031205800C79F94 /* swemmoon.c in Sources */,
+				3571C8152031205800C79F94 /* swephlib.c in Sources */,
+				3571C81A203120CE00C79F94 /* SwissEphemeris.swift in Sources */,
+				3571C80D2031205800C79F94 /* swepcalc.c in Sources */,
+				356DD01A2032DA2700C1D1C3 /* Extensions.swift in Sources */,
+				3571C8162031205800C79F94 /* swejpl.c in Sources */,
+				3571C8092031205800C79F94 /* swehel.c in Sources */,
+				3571C80B2031205800C79F94 /* swepdate.c in Sources */,
+				3571C8132031205800C79F94 /* swedate.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3571C7D62031203A00C79F94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3571C7E02031203A00C79F94 /* SwissEphemerisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3571C7DD2031203A00C79F94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3571C7D02031203A00C79F94 /* SwissEphemeris */;
+			targetProxy = 3571C7DC2031203A00C79F94 /* PBXContainerItemProxy */;
+		};
+		358856D6203374B600C8EAAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3571C7D02031203A00C79F94 /* SwissEphemeris */;
+			targetProxy = 358856D5203374B600C8EAAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		356DD00C2032C5AE00C1D1C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				356DD00D2032C5AE00C1D1C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		356DD0112032C5AE00C1D1C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				356DD0122032C5AE00C1D1C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		356DD0152032C5AE00C1D1C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F72NGYWYWY;
+				INFOPLIST_FILE = SwissTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwissTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		356DD0162032C5AE00C1D1C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F72NGYWYWY;
+				INFOPLIST_FILE = SwissTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwissTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3571C7E32031203A00C79F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3571C7E42031203A00C79F94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3571C7E62031203A00C79F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F72NGYWYWY;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwissEphemeris/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwissEphemeris;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/SwissEphemeris/SwissEph/**";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3571C7E72031203A00C79F94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F72NGYWYWY;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwissEphemeris/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwissEphemeris;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/SwissEphemeris/SwissEph/**";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3571C7E92031203A00C79F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F72NGYWYWY;
+				INFOPLIST_FILE = SwissEphemerisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwissEphemerisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3571C7EA2031203A00C79F94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F72NGYWYWY;
+				INFOPLIST_FILE = SwissEphemerisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwissEphemerisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		356DD0172032C5AE00C1D1C3 /* Build configuration list for PBXNativeTarget "SwissTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				356DD0152032C5AE00C1D1C3 /* Debug */,
+				356DD0162032C5AE00C1D1C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3571C7CB2031203A00C79F94 /* Build configuration list for PBXProject "SwissEphemeris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3571C7E32031203A00C79F94 /* Debug */,
+				3571C7E42031203A00C79F94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3571C7E52031203A00C79F94 /* Build configuration list for PBXNativeTarget "SwissEphemeris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3571C7E62031203A00C79F94 /* Debug */,
+				3571C7E72031203A00C79F94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3571C7E82031203A00C79F94 /* Build configuration list for PBXNativeTarget "SwissEphemerisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3571C7E92031203A00C79F94 /* Debug */,
+				3571C7EA2031203A00C79F94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3571C7C82031203A00C79F94 /* Project object */;
+}

@@ -1,0 +1,5 @@
+module SwissEph {
+    header "swephexp.h"
+    export *
+}
+
