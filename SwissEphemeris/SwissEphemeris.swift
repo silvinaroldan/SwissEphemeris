@@ -33,10 +33,10 @@ public class SwissEphemeris {
     }
     
     public func sunPosition() -> Double {
-        let s = Bundle.main.bundlePath
-        let cs = (s as NSString).utf8String
-        let buffer = UnsafeMutablePointer<Int8>(mutating: cs)
-        swe_set_ephe_path(buffer)
+//        let s = Bundle.main.bundlePath
+//        let cs = (s as NSString).utf8String
+//        let buffer = UnsafeMutablePointer<Int8>(mutating: cs)
+//        swe_set_ephe_path(buffer)
         
 //        swe_set_topo(
 //            -58.381592    ,
@@ -105,7 +105,7 @@ public class SwissEphemeris {
         seconds %= 60
         return String(
             
-            format: "%d°%d'%d",
+            format: "%d° %d %d",
             abs(degrees),
             minutes,
             seconds

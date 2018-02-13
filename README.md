@@ -1,11 +1,15 @@
 # SwissEphemeris
 Swiss Ephemeris iOS Framework
 
+This Project contains two targets to test the Framework  in iOS apps
+
 
 ## Swiss Ephemeris Resources and Documentation
 [Programming interface](http://www.astro.com/swisseph/swephprg.htm) to the Swiss Ephemeris for more details
 
-To test the Swiss Ephemeris go [here](http://www.astro.com/swisseph/swetest.htm)
+You can use the [Test Swiss Ephemeris Page](http://www.astro.com/swisseph/swetest.htm)
+
+[Download Ephemeris](http://www.astro.com/ftp/swisseph/)
 
 ## Feedback
 
