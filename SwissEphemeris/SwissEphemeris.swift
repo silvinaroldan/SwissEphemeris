@@ -42,16 +42,21 @@ public class SwissEphemeris {
 //            -58.381592    ,
 //            -34.603722,
 //        )
-        
+        //hour =  hourToSeconds(hour: 9, minutes: 40, seconds: 0)
         
         var julianDay = swe_julday(Int32(year), Int32(month), Int32(day), hour, 1)
-        julianDay = julianDay + swe_deltat(julianDay)
+        let delta = swe_deltat(julianDay)
+        let jul_day_ET = julianDay + delta
         let DPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 6)
         
         //let flag = SEFLG_SWIEPH | SEFLG_TOPOCTR
         
-        swe_calc(julianDay, SE_MOON, SEFLG_SWIEPH, DPointer, nil)
-        return DPointer[0] // + 0.43
+        let dretPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 2)
+        swe_utc_to_jd(1977, 4, 23, 12, 41, 0, 1, dretPointer, nil)
+        
+        
+        swe_calc(dretPointer[1], SE_SUN, SEFLG_SWIEPH, DPointer, nil)
+        return DPointer[0] 
     }
     
     public func sunPositionString() -> String {
@@ -113,4 +118,8 @@ public class SwissEphemeris {
         )
 
     }
+    
+    
+    
+    
 }
