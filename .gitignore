@@ -1,0 +1,12 @@
+*.xcuserstate
+*.xcuserdatad
+# Xcode
+.DS_Store
+*.xcworkspace
+!default.xcworkspace
+Pods
+SwissEphemeris.xcodeproj/project.xcworkspace/xcuserdata
+
+
+SwissEphemeris/SwissEphemeris.app.dSYM.zip
+SwissEphemeris/SwissEphemeris.ipa
