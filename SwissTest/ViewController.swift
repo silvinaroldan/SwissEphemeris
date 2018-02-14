@@ -13,9 +13,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let swiss = SwissEphemeris(month: 4, day: 23, year: 1977, hour: 12, minutes: 41, seconds: 00)
+        let swiss = SwissEphemeris(month: 4, day: 23, year: 1977, hour: 12, minutes: 41, seconds: 0,houseType: "T", latitude:  -31.632389, longitude: -60.699459)
         let test = decimalToDegree(swiss.getSunPosition())
-      
+        let test2 = decimalToDegree(swiss.getHouse(2))
+        let test3 = decimalToDegree(swiss.getHouse(3))
+        let test5 = decimalToDegree(swiss.getHouse(4))
+        let test6 = decimalToDegree(swiss.getHouse(5))
+        let test4 = decimalToDegree(swiss.getASC())
+        //let test3 = decimalToDegree(swiss.getMC())
     }
 
     func decimalToDegree(_ decimal: Double) -> String {

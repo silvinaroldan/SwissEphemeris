@@ -17,14 +17,20 @@ public class SwissEphemeris {
     public var hour: Int
     public var minutes: Int
     public var seconds: Int
-
-    public init(month:Int, day:Int, year:Int, hour:Int, minutes: Int, seconds:Int) {
+    public var houseType: Character
+    public var longitude: Double
+    public var latitude: Double
+    
+    public init(month: Int, day: Int, year: Int, hour: Int, minutes: Int, seconds: Int, houseType: Character, latitude: Double, longitude: Double) {
         self.day = day
         self.month = month
         self.year = year
         self.hour = hour
         self.minutes = minutes
         self.seconds = seconds
+        self.houseType = houseType
+        self.longitude = longitude
+        self.latitude = latitude
     }
     
     private func getJulianDay() -> Double {
@@ -42,36 +48,63 @@ public class SwissEphemeris {
     }
     
     public func getSunPosition() -> Double {
-        return  getPositionFor(Int(SE_SUN))
+        return getPositionFor(Int(SE_SUN))
     }
     
     public func getMoonPosition() -> Double {
-        return  getPositionFor(Int(SE_MOON))
+        return getPositionFor(Int(SE_MOON))
     }
     
     public func getMercuryPosition() -> Double {
-        return  getPositionFor(Int(SE_MERCURY))
+        return getPositionFor(Int(SE_MERCURY))
     }
     
     public func getVenusPosition() -> Double {
-        return  getPositionFor(Int(SE_VENUS))
+        return getPositionFor(Int(SE_VENUS))
     }
     
     public func getMarsPosition() -> Double {
-        return  getPositionFor(Int(SE_MARS))
+        return getPositionFor(Int(SE_MARS))
     }
     
     public func getUranusPosition() -> Double {
-        return  getPositionFor(Int(SE_URANUS))
+        return getPositionFor(Int(SE_URANUS))
     }
     
     public func getNeptunePosition() -> Double {
-        return  getPositionFor(Int(SE_NEPTUNE))
+        return getPositionFor(Int(SE_NEPTUNE))
     }
     
     public func getPlutoPosition() -> Double {
-        return  getPositionFor(Int(SE_PLUTO))
+        return getPositionFor(Int(SE_PLUTO))
     }
+    
+    private func houseCusp() -> (UnsafeMutablePointer<Double>, UnsafeMutablePointer<Double>) {
+        let julianDay = getJulianDay()
+        let cuspids: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 13)
+        let aSCMC: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 10)
+        
+        swe_houses(julianDay, latitude, longitude, Int32(houseType.asciiValue), cuspids, aSCMC)
+        
+        return (cuspids, aSCMC)
+    }
+    
+    public func getHouse(_ cuspid:Int) -> Double {
+        let cusp = houseCusp()
+        return cusp.0[cuspid - 1]
+    }
+    
+    public func getASC() -> Double {
+        let cusp = houseCusp()
+        return cusp.1[0]
+    }
+    
+//    public func getMC() -> Double {
+//        let cusp = houseCusp()
+//        return cusp.1[1]
+//    }
+    
+    
     
 //    public func sunPosition() -> Double {
     ////        let s = Bundle.main.bundlePath
