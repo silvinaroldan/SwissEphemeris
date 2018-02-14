@@ -1,4 +1,6 @@
 # SwissEphemeris
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/silvinaroldan/SwissEphemeris)   [![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg)](https://github.com/silvinaroldan/SwissEphemeris)
+            
 Swiss Ephemeris iOS Framework
 
 This Project contains two targets to test the Framework  in iOS apps
