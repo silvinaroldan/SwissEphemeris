@@ -6,120 +6,156 @@
 //  Copyright © 2018 Silvina Roldan. All rights reserved.
 //
 
-/*************** swe_julday ********************************************
- * This function returns the absolute Julian day number (JD)
- * for a given calendar date.
- * The arguments are a calendar date: day, month, year as integers,
- * hour as double with decimal fraction.
- * If gregflag = SE_GREG_CAL (1), Gregorian calendar is assumed,
- * if gregflag = SE_JUL_CAL (0),Julian calendar is assumed.
- ************************************************************************/
-
 import SwissEph
 import UIKit
 
 public class SwissEphemeris {
-
+    
     public var day: Int
     public var month: Int
     public var year: Int
-    public var hour: Double
-    
-    public init(day:Int, month:Int, year:Int, hour:Double) {
+    public var hour: Int
+    public var minutes: Int
+    public var seconds: Int
+
+    public init(month:Int, day:Int, year:Int, hour:Int, minutes: Int, seconds:Int) {
         self.day = day
         self.month = month
         self.year = year
         self.hour = hour
+        self.minutes = minutes
+        self.seconds = seconds
     }
     
-    public func sunPosition() -> Double {
-//        let s = Bundle.main.bundlePath
-//        let cs = (s as NSString).utf8String
-//        let buffer = UnsafeMutablePointer<Int8>(mutating: cs)
-//        swe_set_ephe_path(buffer)
-        
-//        swe_set_topo(
-//            -58.381592    ,
-//            -34.603722,
-//        )
-        //hour =  hourToSeconds(hour: 9, minutes: 40, seconds: 0)
-        
-        var julianDay = swe_julday(Int32(year), Int32(month), Int32(day), hour, 1)
-        let delta = swe_deltat(julianDay)
-        let jul_day_ET = julianDay + delta
-        let DPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 6)
-        
-        //let flag = SEFLG_SWIEPH | SEFLG_TOPOCTR
-        
-        let dretPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 2)
-        swe_utc_to_jd(1977, 4, 23, 12, 41, 0, 1, dretPointer, nil)
-        
-        
-        swe_calc(dretPointer[1], SE_SUN, SEFLG_SWIEPH, DPointer, nil)
-        return DPointer[0] 
+    private func getJulianDay() -> Double {
+        let times: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 2)
+        swe_utc_to_jd(int32(year), int32(month), int32(day), int32(hour), int32(minutes), Double(seconds), SE_GREG_CAL, times, nil)
+        return times[1]
     }
     
-    public func sunPositionString() -> String {
-        return decimalToDegree(sunPosition())
-    }
-    
-    public func SWE_CALC() -> UnsafeMutablePointer<Double> {
+    private func getPositionFor(_ planet: Int) -> Double {
+        let julianDay = getJulianDay()
+        let positions: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 6)
         
-        let julianDay = swe_julday(Int32(year), Int32(month), Int32(day), hour, 1)
-        let DPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 6)
-        swe_calc(julianDay, SE_SUN, SEFLG_SWIEPH, DPointer, nil)
-        return DPointer
+        swe_calc(julianDay, Int32(planet), SEFLG_SWIEPH, positions, nil)
+        return positions[0]
     }
     
-    public func houseCusp() -> UnsafeMutablePointer<Double> {
-        let julianDay = swe_julday(Int32(year), Int32(month), Int32(day), hour, 1)
-        let cuspPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 13)
-        let ascMCPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 10)
-    
-        swe_houses(julianDay, -34.6131500, -58.3772300, Int32(Character("P").asciiValue), cuspPointer, ascMCPointer)
-        
-        return cuspPointer
+    public func getSunPosition() -> Double {
+        return  getPositionFor(Int(SE_SUN))
     }
     
-    func coordinateString(_ latitude: Double,_ longitude: Double) -> String {
-        var latSeconds = Int(latitude * 3600)
-        let latDegrees = latSeconds / 3600
-        latSeconds = abs(latSeconds % 3600)
-        let latMinutes = latSeconds / 60
-        latSeconds %= 60
-        var longSeconds = Int(longitude * 3600)
-        let longDegrees = longSeconds / 3600
-        longSeconds = abs(longSeconds % 3600)
-        let longMinutes = longSeconds / 60
-        longSeconds %= 60
-        return String(format:"%d°%d'%d\"%@ %d°%d'%d\"%@",
-                      abs(latDegrees),
-                      latMinutes,
-                      latSeconds, latDegrees >= 0 ? "N" : "S",
-                      abs(longDegrees),
-                      longMinutes,
-                      longSeconds,
-                      longDegrees >= 0 ? "E" : "W" )
+    public func getMoonPosition() -> Double {
+        return  getPositionFor(Int(SE_MOON))
     }
     
-    func decimalToDegree(_ decimal: Double) -> String{
-        var seconds = Int(decimal * 3600)
-        let degrees = seconds / 3600
-        seconds = abs(seconds % 3600)
-        let minutes = seconds / 60
-        seconds %= 60
-        return String(
-            
-            format: "%d° %d %d",
-            abs(degrees),
-            minutes,
-            seconds
-            
-        )
-
+    public func getMercuryPosition() -> Double {
+        return  getPositionFor(Int(SE_MERCURY))
     }
     
+    public func getVenusPosition() -> Double {
+        return  getPositionFor(Int(SE_VENUS))
+    }
     
+    public func getMarsPosition() -> Double {
+        return  getPositionFor(Int(SE_MARS))
+    }
     
+    public func getUranusPosition() -> Double {
+        return  getPositionFor(Int(SE_URANUS))
+    }
+    
+    public func getNeptunePosition() -> Double {
+        return  getPositionFor(Int(SE_NEPTUNE))
+    }
+    
+    public func getPlutoPosition() -> Double {
+        return  getPositionFor(Int(SE_PLUTO))
+    }
+    
+//    public func sunPosition() -> Double {
+    ////        let s = Bundle.main.bundlePath
+    ////        let cs = (s as NSString).utf8String
+    ////        let buffer = UnsafeMutablePointer<Int8>(mutating: cs)
+    ////        swe_set_ephe_path(buffer)
+//
+    ////        swe_set_topo(
+    ////            -58.381592    ,
+    ////            -34.603722,
+    ////        )
+//        // hour =  hourToSeconds(hour: 9, minutes: 40, seconds: 0)
+//
+//        var julianDay = getJulianDay(month: < #T##Int#>, day: < #T##Int#>, year: < #T##Int#>, hour: < #T##Int#>, minutes: < #T##Int#>, second: < #T##Int#>)
+//            let DPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 6)
+//
+//            // let flag = SEFLG_SWIEPH | SEFLG_TOPOCTR
+//
+//            let dretPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 2)
+//            swe_utc_to_jd(1977, 4, 23, 12, 41, 0, 1, dretPointer, nil)
+//
+//            swe_calc(dretPointer[1], SE_SUN, SEFLG_SWIEPH, DPointer, nil)
+//            return DPointer[0]
+//    }
+//
+//            public func sunPositionString() -> String {
+//                return decimalToDegree(sunPosition())
+//            }
+//
+//            public func SWE_CALC() -> UnsafeMutablePointer<Double> {
+//
+//                let julianDay = swe_julday(Int32(year), Int32(month), Int32(day), hour, 1)
+//                let DPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 6)
+//                swe_calc(julianDay, SE_SUN, SEFLG_SWIEPH, DPointer, nil)
+//                return DPointer
+//            }
+//
+//            public func houseCusp() -> UnsafeMutablePointer<Double> {
+//                let julianDay = swe_julday(Int32(year), Int32(month), Int32(day), hour, 1)
+//                let cuspPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 13)
+//                let ascMCPointer: UnsafeMutablePointer<Double> = UnsafeMutablePointer.allocate(capacity: 10)
+//
+//                swe_houses(julianDay, -34.6131500, -58.3772300, Int32(Character("P").asciiValue), cuspPointer, ascMCPointer)
+//
+//                return cuspPointer
+//            }
+//
+//            func coordinateString(_ latitude: Double, _ longitude: Double) -> String {
+//                var latSeconds = Int(latitude * 3600)
+//                let latDegrees = latSeconds / 3600
+//                latSeconds = abs(latSeconds % 3600)
+//                let latMinutes = latSeconds / 60
+//                latSeconds %= 60
+//                var longSeconds = Int(longitude * 3600)
+//                let longDegrees = longSeconds / 3600
+//                longSeconds = abs(longSeconds % 3600)
+//                let longMinutes = longSeconds / 60
+//                longSeconds %= 60
+//                return String(format: "%d°%d'%d\"%@ %d°%d'%d\"%@",
+//                              abs(latDegrees),
+//                              latMinutes,
+//                              latSeconds, latDegrees >= 0 ? "N" : "S",
+//                              abs(longDegrees),
+//                              longMinutes,
+//                              longSeconds,
+//                              longDegrees >= 0 ? "E" : "W")
+//            }
+//
+//            func decimalToDegree(_ decimal: Double) -> String {
+//                var seconds = Int(decimal * 3600)
+//                let degrees = seconds / 3600
+//                seconds = abs(seconds % 3600)
+//                let minutes = seconds / 60
+//                seconds %= 60
+//                return String(
+//
+//                    format: "%d° %d %d",
+//                    abs(degrees),
+//                    minutes,
+//                    seconds
+//
+//                )
+//
+//            }
     
 }
+

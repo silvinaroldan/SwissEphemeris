@@ -6,39 +6,42 @@
 //  Copyright © 2018 Silvina Roldan. All rights reserved.
 //
 
-import UIKit
 import SwissEphemeris
+import UIKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let hour = hourToSeconds(hour: 1, minutes: 0, seconds: 0)
-        let swiss = SwissEphemeris(day: 23, month: 4, year: 1977, hour: 12.41)
-        let sun = swiss.sunPositionString()
-        let sun2 = swiss.sunPosition()
-        let test = format(hour)
-        let house = swiss.houseCusp()
-        print(sun)
+        let swiss = SwissEphemeris(month: 4, day: 23, year: 1977, hour: 12, minutes: 41, seconds: 00)
+        let test = decimalToDegree(swiss.getSunPosition())
+      
     }
 
-    func hourToSeconds(hour: Int, minutes: Int, seconds: Int) -> Double {
-        return Double(seconds + minutes * 60 + hour * 3600)
+    func decimalToDegree(_ decimal: Double) -> String {
+        var seconds = Int(decimal * 3600)
+        let degrees = seconds / 3600
+        seconds = abs(seconds % 3600)
+        let minutes = seconds / 60
+        seconds %= 60
+        return String(
+
+            format: "%d° %d ' %d",
+            abs(degrees),
+            minutes,
+            seconds
+
+        )
     }
 
-    func format(_ duration: Double) -> String {
-        let formatter = DateComponentsFormatter()
-        formatter.zeroFormattingBehavior = .pad
-        formatter.allowedUnits = [.minute, .second]
-        
-        if duration >= 3600 {
-            formatter.allowedUnits.insert(.hour)
-        }
-        
-        return formatter.string(from: duration)!
-    }
-
-
-
+    //    func format(_ duration: Double) -> String {
+    //        let formatter = DateComponentsFormatter()
+    //        formatter.zeroFormattingBehavior = .pad
+    //        formatter.allowedUnits = [.minute, .second]
+    //        if duration >= 3600 {
+    //            formatter.allowedUnits.insert(.hour)
+    //        }
+    //        return formatter.string(from: duration)!
+    //    }
 }
 
