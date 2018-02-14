@@ -1,5 +1,5 @@
 # SwissEphemeris
-[![GitHub issues](https://img.shields.io/github/issues/silvinaroldan/SwissEphemeris.svg)](https://github.com/silvinaroldan/SwissEphemeris/issues) [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/silvinaroldan/SwissEphemeris)
+[![GitHub issues](https://img.shields.io/github/issues/silvinaroldan/SwissEphemeris.svg)](https://github.com/silvinaroldan/SwissEphemeris/issues) [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/silvinaroldan/SwissEphemeris) [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
             
 Swiss Ephemeris iOS Framework
