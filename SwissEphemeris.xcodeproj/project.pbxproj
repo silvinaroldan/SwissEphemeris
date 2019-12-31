@@ -12,7 +12,7 @@
 		356DD00E2032C5AE00C1D1C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356DD00C2032C5AE00C1D1C3 /* Main.storyboard */; };
 		356DD0102032C5AE00C1D1C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356DD00F2032C5AE00C1D1C3 /* Assets.xcassets */; };
 		356DD0132032C5AE00C1D1C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356DD0112032C5AE00C1D1C3 /* LaunchScreen.storyboard */; };
-		356DD01A2032DA2700C1D1C3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DD0192032DA2700C1D1C3 /* Extensions.swift */; };
+		356DD01A2032DA2700C1D1C3 /* Character+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DD0192032DA2700C1D1C3 /* Character+Extensions.swift */; };
 		3571C7DB2031203A00C79F94 /* SwissEphemeris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3571C7D12031203A00C79F94 /* SwissEphemeris.framework */; };
 		3571C7E02031203A00C79F94 /* SwissEphemerisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7DF2031203A00C79F94 /* SwissEphemerisTests.swift */; };
 		3571C7E22031203A00C79F94 /* SwissEphemeris.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7D42031203A00C79F94 /* SwissEphemeris.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,9 +38,10 @@
 		3571C8152031205800C79F94 /* swephlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7FF2031205800C79F94 /* swephlib.c */; };
 		3571C8162031205800C79F94 /* swejpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 3571C8002031205800C79F94 /* swejpl.c */; };
 		3571C8172031205800C79F94 /* sweodef.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C8012031205800C79F94 /* sweodef.h */; };
-		3571C81A203120CE00C79F94 /* SwissEphemeris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571C819203120CE00C79F94 /* SwissEphemeris.swift */; };
 		358856D3203374B600C8EAAD /* SwissEphemeris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3571C7D12031203A00C79F94 /* SwissEphemeris.framework */; };
 		358856D4203374B600C8EAAD /* SwissEphemeris.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3571C7D12031203A00C79F94 /* SwissEphemeris.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35D7810323BAF40900E36324 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D7810223BAF40900E36324 /* Double+Extensions.swift */; };
+		35D7810523BAF5A500E36324 /* SwissEphemerisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D7810423BAF5A500E36324 /* SwissEphemerisService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +83,7 @@
 		356DD00F2032C5AE00C1D1C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		356DD0122032C5AE00C1D1C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		356DD0142032C5AE00C1D1C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		356DD0192032DA2700C1D1C3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		356DD0192032DA2700C1D1C3 /* Character+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Extensions.swift"; sourceTree = "<group>"; };
 		3571C7D12031203A00C79F94 /* SwissEphemeris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwissEphemeris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3571C7D42031203A00C79F94 /* SwissEphemeris.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwissEphemeris.h; sourceTree = "<group>"; };
 		3571C7D52031203A00C79F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,7 +113,8 @@
 		3571C8002031205800C79F94 /* swejpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swejpl.c; sourceTree = "<group>"; };
 		3571C8012031205800C79F94 /* sweodef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweodef.h; sourceTree = "<group>"; };
 		3571C8182031208E00C79F94 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		3571C819203120CE00C79F94 /* SwissEphemeris.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwissEphemeris.swift; sourceTree = "<group>"; };
+		35D7810223BAF40900E36324 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		35D7810423BAF5A500E36324 /* SwissEphemerisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwissEphemerisService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +160,8 @@
 		356DD0182032DA0A00C1D1C3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				356DD0192032DA2700C1D1C3 /* Extensions.swift */,
+				356DD0192032DA2700C1D1C3 /* Character+Extensions.swift */,
+				35D7810223BAF40900E36324 /* Double+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,7 +193,7 @@
 				3571C7EB2031205800C79F94 /* SwissEph */,
 				3571C7D42031203A00C79F94 /* SwissEphemeris.h */,
 				3571C7D52031203A00C79F94 /* Info.plist */,
-				3571C819203120CE00C79F94 /* SwissEphemeris.swift */,
+				35D7810423BAF5A500E36324 /* SwissEphemerisService.swift */,
 			);
 			path = SwissEphemeris;
 			sourceTree = "<group>";
@@ -321,11 +324,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Silvina Roldan";
 				TargetAttributes = {
 					356DD0052032C5AD00C1D1C3 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 					3571C7D02031203A00C79F94 = {
@@ -402,17 +406,18 @@
 			files = (
 				3571C8102031205800C79F94 /* swecl.c in Sources */,
 				3571C8122031205800C79F94 /* sweph.c in Sources */,
+				35D7810323BAF40900E36324 /* Double+Extensions.swift in Sources */,
 				3571C8142031205800C79F94 /* swemplan.c in Sources */,
 				3571C80F2031205800C79F94 /* swehouse.c in Sources */,
 				3571C8042031205800C79F94 /* swemmoon.c in Sources */,
 				3571C8152031205800C79F94 /* swephlib.c in Sources */,
-				3571C81A203120CE00C79F94 /* SwissEphemeris.swift in Sources */,
 				3571C80D2031205800C79F94 /* swepcalc.c in Sources */,
-				356DD01A2032DA2700C1D1C3 /* Extensions.swift in Sources */,
+				356DD01A2032DA2700C1D1C3 /* Character+Extensions.swift in Sources */,
 				3571C8162031205800C79F94 /* swejpl.c in Sources */,
 				3571C8092031205800C79F94 /* swehel.c in Sources */,
 				3571C80B2031205800C79F94 /* swepdate.c in Sources */,
 				3571C8132031205800C79F94 /* swedate.c in Sources */,
+				35D7810523BAF5A500E36324 /* SwissEphemerisService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +475,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwissTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -486,7 +491,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwissTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

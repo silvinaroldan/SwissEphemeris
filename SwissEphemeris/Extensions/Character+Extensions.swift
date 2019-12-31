@@ -9,6 +9,7 @@
 import UIKit
 
 extension Character {
+    
     var asciiValue: Int {
         get {
             let s = String(self).unicodeScalars
