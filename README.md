@@ -37,4 +37,6 @@ Please feel free to fill [issues](http://github.com/silvinaroldan/SwissEphemeris
 
 ## License
 
-The license for this project is the same as original [Swiss Ephemeris](http://www.astro.com/swisseph/swephinfo_e.htm)
+The license for this project is the same as original [Swiss Ephemeris](http://www.astro.com/swisseph/swephinfo_e.htm). 
+
+Swiss Ephemeris is licenced from [Astrodienst](http://www.astro.com/), please read the details on licensing.
