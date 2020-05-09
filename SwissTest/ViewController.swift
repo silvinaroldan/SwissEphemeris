@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         let equatorialCoordinatesForSun = swiss.getEquatorialCoordinatesFor(Planet.sun.rawValue)
 
         print("First house position: \(firstHousePosition). Sun Position: \(sunPosition)")
-        print("Equatorial coordinates for the sun. Right Ascencional: \(equatorialCoordinatesForSun.0). Declination: \(equatorialCoordinatesForSun.1)")
+        print("Equatorial coordinates for the sun. Right Ascension: \(equatorialCoordinatesForSun.0). Declination: \(equatorialCoordinatesForSun.1)")
     }
 }
 
