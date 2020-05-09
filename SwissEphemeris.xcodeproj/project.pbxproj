@@ -14,7 +14,6 @@
 		356DD0132032C5AE00C1D1C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356DD0112032C5AE00C1D1C3 /* LaunchScreen.storyboard */; };
 		356DD01A2032DA2700C1D1C3 /* Character+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356DD0192032DA2700C1D1C3 /* Character+Extensions.swift */; };
 		3571C7DB2031203A00C79F94 /* SwissEphemeris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3571C7D12031203A00C79F94 /* SwissEphemeris.framework */; };
-		3571C7E02031203A00C79F94 /* SwissEphemerisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571C7DF2031203A00C79F94 /* SwissEphemerisTests.swift */; };
 		3571C7E22031203A00C79F94 /* SwissEphemeris.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7D42031203A00C79F94 /* SwissEphemeris.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3571C8022031205800C79F94 /* swemptab.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7EC2031205800C79F94 /* swemptab.h */; };
 		3571C8032031205800C79F94 /* swepcalc.h in Headers */ = {isa = PBXBuildFile; fileRef = 3571C7ED2031205800C79F94 /* swepcalc.h */; };
@@ -88,8 +87,6 @@
 		3571C7D42031203A00C79F94 /* SwissEphemeris.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwissEphemeris.h; sourceTree = "<group>"; };
 		3571C7D52031203A00C79F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3571C7DA2031203A00C79F94 /* SwissEphemerisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwissEphemerisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3571C7DF2031203A00C79F94 /* SwissEphemerisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwissEphemerisTests.swift; sourceTree = "<group>"; };
-		3571C7E12031203A00C79F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3571C7EC2031205800C79F94 /* swemptab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swemptab.h; sourceTree = "<group>"; };
 		3571C7ED2031205800C79F94 /* swepcalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swepcalc.h; sourceTree = "<group>"; };
 		3571C7EE2031205800C79F94 /* swemmoon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swemmoon.c; sourceTree = "<group>"; };
@@ -170,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				3571C7D32031203A00C79F94 /* SwissEphemeris */,
-				3571C7DE2031203A00C79F94 /* SwissEphemerisTests */,
 				356DD0072032C5AE00C1D1C3 /* SwissTest */,
 				3571C7D22031203A00C79F94 /* Products */,
 			);
@@ -196,15 +192,6 @@
 				35D7810423BAF5A500E36324 /* SwissEphemerisService.swift */,
 			);
 			path = SwissEphemeris;
-			sourceTree = "<group>";
-		};
-		3571C7DE2031203A00C79F94 /* SwissEphemerisTests */ = {
-			isa = PBXGroup;
-			children = (
-				3571C7DF2031203A00C79F94 /* SwissEphemerisTests.swift */,
-				3571C7E12031203A00C79F94 /* Info.plist */,
-			);
-			path = SwissEphemerisTests;
 			sourceTree = "<group>";
 		};
 		3571C7EB2031205800C79F94 /* SwissEph */ = {
@@ -425,7 +412,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3571C7E02031203A00C79F94 /* SwissEphemerisTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

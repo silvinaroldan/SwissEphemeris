@@ -10,18 +10,19 @@ import SwissEphemeris
 import UIKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // UTC time - Topocentric System house
-        let swiss = SwissEphemeris(month: 4, day: 23, year: 1977, hour: 12, minutes: 41, seconds: 0,houseType: "T", latitude:  -31.632389, longitude: -60.699459)
+        let swiss = SwissEphemeris(month: 5, day: 23, year: 1985, hour: 12, minutes: 41, seconds: 0, houseType: "T", latitude: -31.632389, longitude: -60.699459)
 
-        let sunPosition = swiss.sunPosition()
         let firstHousePosition = swiss.housePosition(1)
-        print("First house position: " + firstHousePosition + " Sun Position: " + sunPosition)
-    }
+        let sunPosition = swiss.sunPosition()
 
-    
+        let equatorialCoordinatesForSun = swiss.getEquatorialCoordinatesFor(Planet.sun.rawValue)
+
+        print("First house position: \(firstHousePosition). Sun Position: \(sunPosition)")
+        print("Equatorial coordinates for the sun. Right Ascencional: \(equatorialCoordinatesForSun.0). Declination: \(equatorialCoordinatesForSun.1)")
+    }
 }
 
