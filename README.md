@@ -35,6 +35,14 @@ You can use the [Test Swiss Ephemeris Page](http://www.astro.com/swisseph/swetes
 
 Please feel free to fill [issues](http://github.com/silvinaroldan/SwissEphemeris/issues) for bugs, erros and features.
 
+## Contributing
+
+Give a ⭐️ if this project helped you!
+If you want to show some extra appreciation:
+
+<a href="https://www.buymeacoffee.com/silvina" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Present" style="height: 44px !important;width: 140px !important;" height="44px" width="140px" ></a>
+
+
 ## License
 
 The license for this project is the same as original [Swiss Ephemeris](http://www.astro.com/swisseph/swephinfo_e.htm). 
